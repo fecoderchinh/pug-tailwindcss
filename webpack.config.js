@@ -1,14 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const config = {
-    mode: 'development',
     entry: {
         app: './src/app.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: "[name].js",
-        clean: true
+        // clean: true
     },
     devServer: {
         port: 3000,
