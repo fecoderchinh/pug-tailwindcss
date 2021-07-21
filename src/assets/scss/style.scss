@@ -1,0 +1,11 @@
+@import "_variables";
+
+.my-class {
+  @apply text-blue-900;
+  @apply border-red-100;
+  color: $myVar !important;
+  h1 {
+    @apply text-red-600;
+    background: grey;
+  }
+}

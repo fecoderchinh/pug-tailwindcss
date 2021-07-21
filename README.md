@@ -20,6 +20,7 @@ Make sure you have run the below packages globally.
 ## Installation
 
 1. `npm install` or `yarn`
+2. `npm run build` or `yarn build`   
 2. `npm run serve` or `yarn serve`
 3. enjoy.
 
@@ -27,16 +28,13 @@ Make sure you have run the below packages globally.
 
 ```
 .
-├── assets/                     # The assets directory before compiling
-├── bundles/                    # The main directory that will include all of the compiled html
-│   ├── pages/                  # All html pages that compiled
-├── js/                         # Main folder for JS files
-├── css/                        # Main folder for cascade style files
+├── dist/                       # The built directory
 ├── node_modules/               # Store third party modules and initializers (e.g.: gulp, pug, etc)
-├── templates/                  # Main folder for pug template files
-│   ├── pages/                  # All pug pages
-│   ├── partials/               # The elements of partial
-│   ├── wrapper.pug             # The root wrapper which will be extended within pages/
-├── gulpfile.js                 # Setup Gulp tasks
-├── serve.json                  # The configuration for serving
+├── src/                        # The source directory for all project assets
+│   ├── assets/                 # Pre-compiling assets
+│   ├── app.js                  # The file container
+│   ├── index.pug               # The root wrapper of Pug
+├── postcss.config.js           # PostCSS config for TailwindCSS
+├── tailwind.config.js          # The configuration for TailwindCSS
+├── webpack.config.js           # The configuration for Webpack
 ```
