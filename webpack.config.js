@@ -4,6 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
+const CompressionPlugin = require("compression-webpack-plugin");
+
 const config = {
     entry: {
         app: './src/app.js'
@@ -23,6 +25,9 @@ const config = {
         }),
         new MiniCssExtractPlugin({
             filename: "[name].css"
+        }),
+        new CompressionPlugin({
+            test: /\.css(\?.*)?$/i,
         })
     ],
     module: {
